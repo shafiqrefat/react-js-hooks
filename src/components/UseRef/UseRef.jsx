@@ -1,14 +1,13 @@
 import { useRef } from "react";
-import "./App.css";
 
-function App() {
+const UseRef = () => {
   const ref = useRef(null);
   const onClickHandler = () => {
     ref.current.focus();
     ref.current.value = "";
   };
   return (
-    <>
+    <div>
       <input
         type="text"
         name="name"
@@ -17,8 +16,8 @@ function App() {
         ref={ref}
       />
       <button onClick={onClickHandler}>Click Here</button>
-    </>
+    </div>
   );
-}
+};
 
-export default App;
+export default UseRef;
